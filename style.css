@@ -1,0 +1,16 @@
+main{
+    display:flex;
+    gap:24px;
+    padding:32px;
+    background-color:white;
+}
+
+section{
+    flex:2;
+    min-width:0;
+}
+
+aside{
+    flex:1;
+    min-width:0;
+}
