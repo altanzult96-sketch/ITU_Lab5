@@ -1,16 +1,257 @@
-main{
-    display:flex;
-    gap:24px;
-    padding:32px;
-    background-color:white;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-section{
-    flex:2;
-    min-width:0;
+body {
+    margin: 0;
+    background: #0e0e0e;
+    font-family: 'Lato', sans-serif;
+    color: #222;
 }
 
-aside{
-    flex:1;
-    min-width:0;
+button, input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* HEADER */
+header {
+    max-width: 1280px;
+    margin: auto;
+    background: #13124F;
+    color: white;
+    padding: 20px 35px 60px;
+}
+
+header h2 {
+    margin: 0 0 55px;
+}
+
+header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+header button {
+    background: #F61067;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 15px;
+}
+
+/* MAIN */
+main {
+    max-width: 1280px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    display: flex;
+    gap: 30px;
+}
+
+main section {
+    flex: 2;
+    min-width: 0;
+}
+
+main section h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+main section hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+main section p {
+    line-height: 1.5;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+    margin: 35px 0;
+}
+
+/* ALERT */
+main section > div {
+    background: #9090A5;
+    color: white;
+    padding: 12px 15px;
+}
+
+main section > div p {
+    margin: 0;
+}
+
+/* SIDEBAR */
+aside {
+    flex: 1;
+    min-width: 0;
+}
+
+aside > div {
+    margin-bottom: 20px;
+}
+
+/* MESSAGES */
+aside > div:first-child {
+    background: #F61067;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+aside > div:first-child h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.message-count {
+    background: #352BA5;
+    color: white;
+    padding: 4px 9px;
+    border-radius: 50%;
+}
+
+/* WELCOME CANDIDATE */
+aside > div:nth-child(2) {
+    background: #13124F;
+    color: white;
+    padding: 15px;
+}
+
+aside > div:nth-child(2) h3 {
+    background: #9090A5;
+    padding: 15px;
+    margin: -15px -15px 15px;
+    font-size: 17px;
+}
+
+aside > div:nth-child(2) p {
+    line-height: 1.5;
+}
+
+aside input {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #9090A5;
+    padding: 10px;
+    color: white;
+}
+
+aside input::placeholder {
+    color: #bbb;
+}
+
+aside > div:nth-child(2) button {
+    width: 100%;
+    background: #F61067;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+}
+
+aside > div:nth-child(2) a {
+    display: block;
+    background: #352BA5;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 12px 5px;
+    margin: 15px -15px -15px;
+}
+
+/* VOTE */
+aside > div:nth-child(3) {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+aside > div:nth-child(3) p {
+    line-height: 1.5;
+}
+
+aside progress {
+    width: 100%;
+    height: 12px;
+    accent-color: #F61067;
+}
+
+aside > div:nth-child(3) button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #F61067;
+    border: 2px solid #F61067;
+    color: white;
+}
+
+aside > div:nth-child(3) button:last-child {
+    background: white;
+    border-color: #2AD392;
+    color: #2AD392;
+}
+
+/* FOOTER */
+footer {
+    max-width: 1280px;
+    margin: auto;
+    background: #13124F;
+    color: white;
+    padding: 15px 35px;
+    font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    main {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 20px;
+    }
 }
